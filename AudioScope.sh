@@ -102,7 +102,7 @@ printf "."
 # #########################################################
 # Variables in use.
 ifs_str="$IFS"
-ver="0.70.00"
+ver="0.70.01"
 version=" \$VER: AudioScope.sh_Version_""$ver""_2013-2020_Public_Domain_B.Walker_G0LCU."
 setup="$version"
 blankline="                                                                            "
@@ -501,7 +501,7 @@ chmod 666 "$HOME"/AudioScope.tmp/Untitled.m4a
 osascript << AppleSampler
 	tell application "QuickTime Player"
 		activate
-		set savePath to "Macintosh HD:Users:" & "$USER" & ":Temp:" & "Untitled.m4a"
+		set savePath to "Macintosh HD:Users:" & "$USER" & ":AudioScope.tmp:" & "Untitled.m4a"
 		set recording to new audio recording
 		set visible of front window to false
 		delay 2
@@ -5236,4 +5236,3 @@ QUICKSTART
 cat "$HOME"/AudioScope.Circuits >> "$HOME"/AudioScope.Manual
 cat "$HOME"/AudioScope_Quick_Start.Notes >> "$HOME"/AudioScope.Manual
 exit 0
-
